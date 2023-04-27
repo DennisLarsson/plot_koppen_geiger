@@ -4,7 +4,7 @@ An R script that can be used to plot köppen geiger raster layer from CHELSA
 
 CHELSA has a high resolution (1km/30 arcsec) köppengeiger raster layer that has been calculated using their high resoltion climate data. It can be found here (the kg2 is used in the example of this script, found under 1981-2010/ then bio/): https://chelsa-climate.org/1-km-global-koppen-geiger-climate-classification-for-present-and-future/
 
-direct link to the kg2 köppen-geiger raster layer: https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_kg2_1981-2010_V.2.1.tif
+Direct link to the kg2 köppen-geiger raster layer: https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_kg2_1981-2010_V.2.1.tif
 
 Since the default layer includes water bodies, this script can take a layer that excludes water bodies and use that to mask the köppen geiger layer. This means that only köppen geiger data for land bodies remain (oceans etc are set to missing data and not plotted). In the script the elevation data from WorldClim 2 is used and is available from here: https://www.worldclim.org/data/worldclim21.html
 
@@ -31,3 +31,5 @@ overwrite.tiff = TRUE
 ```
 
 and then running the script (either in R using for example: `source("~/PhD_Project/koppen_geiger_climate_classification/plot_koppen_geiger.R", encoding = 'UTF-8')` or in the terminal like this (in ubuntu): `Rscript plot_koppen_geiger.R`
+
+The handling of the high resolution layers take a long time and the script may take up to 10 minutes or more to run on older computers. 

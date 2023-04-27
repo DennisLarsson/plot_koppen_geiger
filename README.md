@@ -6,7 +6,15 @@ CHELSA has a high resolution (1km/30 arcsec) köppengeiger raster layer that has
 
 Direct link to the kg2 köppen-geiger raster layer: https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_kg2_1981-2010_V.2.1.tif
 
+The color coding for the climate classifications are the same as in peel et al 2007 (https://hess.copernicus.org/articles/11/1633/2007/hess-11-1633-2007.html), which climate definitions were used in the calculation of the layers by CHELSA.
+
 Since the default layer includes water bodies, this script can take a layer that excludes water bodies and use that to mask the köppen geiger layer. This means that only köppen geiger data for land bodies remain (oceans etc are set to missing data and not plotted). In the script the elevation data from WorldClim 2 is used and is available from here: https://www.worldclim.org/data/worldclim21.html
+
+make sure you have the R package 'raster' installed, if you are uncertain whether it is installed run this command in R:
+`install.packages("raster")`
+
+it might fail at installing a subpackage called 'terra'. Most likely it is missing the GDAL library on ubuntu and needs to be installed using:
+`sudo apt install libgdal-dev` 
 
 The script is run by first editing the variables at the beginning of the script:
 

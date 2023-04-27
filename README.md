@@ -2,7 +2,7 @@
 An R script that can be used to plot köppen geiger raster layer from CHELSA
 
 
-CHELSA has a high resolution (1km/30 arcsec) köppengeiger raster layer that has been calculated using their high resoltion climate data. It can be found here: https://chelsa-climate.org/1-km-global-koppen-geiger-climate-classification-for-present-and-future/
+CHELSA has a high resolution (1km/30 arcsec) köppengeiger raster layer that has been calculated using their high resoltion climate data. It can be found here (the kg2 is used in the example of this script, found under 1981-2010/ then bio/): https://chelsa-climate.org/1-km-global-koppen-geiger-climate-classification-for-present-and-future/
 
 Since the default layer includes water bodies, this script can take a layer that excludes water bodies and use that to mask the köppen geiger layer. This means that only köppen geiger data for land bodies remain (oceans etc are set to missing data and not plotted). In the script the elevation data from WorldClim 2 is used and is available from here: https://www.worldclim.org/data/worldclim21.html
 
